@@ -1,0 +1,88 @@
+extends ./_layouts/index.jade
+
+block title
+  title Résumé
+
+block content
+  .resume
+    .row.resume-header
+      .col-xs-8
+        h1 Aaron Schif
+        h2 Software Developer
+      .col-xs-4.resume-header-right
+        p: a(href='tel:000.000.0000') 000.000.0000
+        p: a(href='mailto:mail@mail.com') mail@mail.com
+        p: a(href='https://aaronschif.github.io') aaronschif.github.io
+    .row.resume-content
+      .col-md-12
+        h2 Profile
+        dl.dl-horizontal
+          dt <i class="fa fa-github"></i> github
+          dd: a(href='https://github.com/aaronschif') github.com/aaronschif
+          dt <i class="fa fa-stack-overflow"></i> stackoverflow 
+          dd: a(href='http://stackoverflow.com/users/1813277/aaron-schif') stackoverflow.com/users/1813277/aaron-schif
+        h2 Skills
+        dl.dl-horizontal
+          dt Languages
+          dd: ul.list-inline
+            li Python
+            li D
+            li C
+            li C++
+            li C#
+            li java
+            li bash
+            li HTML
+            li jade
+            li css
+            li sass
+            li JavaScript
+            li Markdown
+          dt Frameworks
+          dd: ul.list-inline
+            li Django
+            li Linux
+            li Unix
+            li JQuery
+            li Ajax
+            li Node.js
+            li Twitter Bootstrap
+            li Font Awesome
+            li Responsive Design
+            li Continous Integration
+            li Version Control
+            li Unit Testing
+            li Test Driven Development
+          dt Programs
+          dd: ul.list-inline
+            li git
+            li Vagrant
+            li Jenkins
+            li py.test
+            
+        h2 Experience
+        dl.dl-horizontal
+          dt Kansas State Webteam 
+            small.date-text 2013 - 2015
+          dd 
+            p.
+              Developed internet applications. Worked with a team. All kinds of
+              stuff to say. Bollo. Words Words Words.
+          dt Kansas State Robotics Competition Team
+            small.date-text 2014-2016
+          dd
+          dt dgitprompt
+          dd
+            p.
+               Built with D, C, and libgit. Displays git information in a shell 
+               independent manner for your prompt. Licenced under MIT licence.
+            p: a(href="https://github.com/aaronschif/dgitprompt") github.com/aaronschif/dgitprompt
+        h2 Education    
+        dl.dl-horizontal
+          dt Kansas State University
+            small.date-text 2016 Grad
+          dd
+            p.
+              Study computer science. Work in a team. Learn many programming
+              languages, pattens, and techniques. 
+            P GPA 3.0

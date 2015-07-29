@@ -1,0 +1,64 @@
+
+@media (min-width: 0px)
+  .content
+    width: 100%
+
+@media screen and (min-width: 800px)
+  .content
+    width: 800px
+
+@media print
+  .content
+    width: 100%
+
+
+@media print
+  a[href]:after
+    content: none !important
+  a
+    text-decoration: none !important
+
+.home
+  img
+    float: right
+    border:
+      radius: 8px
+      color: gray
+      width: 2px
+      style: solid
+
+.navbar-inverse
+  border-radius: 0px
+
+.resume
+  a
+    color: #333
+    text-decoration: underline
+
+.resume-content
+  h2
+    font-size: 24px
+    background-color: lighten(gray, 40%)
+    padding: 4px
+    margin: 16px 0px
+    border: solid gray 1px
+  .date-text
+    float: right
+    color: gray
+  .list-inline
+    li
+      // padding: 0px 8px
+
+.resume-header
+  &-right
+    text-align: right
+  margin-top: 20px
+
+  p
+    margin: 4px 0px
+
+  h1
+    margin: 0px
+
+  h2
+    margin: 4px 0px

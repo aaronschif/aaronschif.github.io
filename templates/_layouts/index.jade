@@ -1,0 +1,30 @@
+!!! 5
+html(lang="en")
+  head
+    block title
+      
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel="stylesheet")
+    link(href="/main.css", rel="stylesheet")
+  body
+    nav.navbar.navbar-inverse
+      .container
+        .navbar-header
+          button(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar").navbar-toggle.collapsed
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href='/').navbar-brand Aaron Schif
+        .collapse.navbar-collapse#navbar
+          ul.nav.navbar-nav
+            li: a(href="/resume") Resume
+            li: a(href='https://github.com/aaronschif') 
+              i(class="fa fa-github")
+            li: a(href='http://stackoverflow.com/users/1813277/aaron-schif') 
+              i(class="fa fa-stack-overflow")
+    .container.content
+      block content
+        h1 Jade - node template engine
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
