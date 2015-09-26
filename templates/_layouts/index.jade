@@ -4,10 +4,12 @@ html(lang="en")
     block title
       
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
+    //- link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css", rel="stylesheet", integrity="sha256-GHW2S7IZAQe8+YkyL99LyDj1zdWXSPOG+JZafCtKiSc= sha512-vxM32w6T7zJ83xOQ6FT4CEFnlasqmkcB0+ojgbI0N6ZtSxYvHmT7sX2icN07TqEqr5wdKwoLkmB8sAsGAjCJHg==", crossorigin="anonymous")
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel="stylesheet")
     link(href="/main.css", rel="stylesheet")
+    link(rel="shortcut icon" href="http://icons.iconarchive.com/icons/icons8/android/512/Animals-Sheep-icon.png")
   body
-    nav.navbar.navbar-inverse
+    nav.navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
           button(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar").navbar-toggle.collapsed
@@ -19,12 +21,14 @@ html(lang="en")
         .collapse.navbar-collapse#navbar
           ul.nav.navbar-nav
             li: a(href="/resume") Resume
+            li: a(href="") Blog
             li: a(href='https://github.com/aaronschif') 
-              i(class="fa fa-github")
+              i(class="fa fa-github")&nbsp On Github
             li: a(href='http://stackoverflow.com/users/1813277/aaron-schif') 
-              i(class="fa fa-stack-overflow")
+              i(class="fa fa-stack-overflow")&nbsp On Stack Overflow
     .container.content
-      block content
-        h1 Jade - node template engine
+      .content-wrapped
+        block content
+          h1 Jade - node template engine
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
