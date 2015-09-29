@@ -8,10 +8,9 @@ def build():
 
 @task
 def clean():
-    run('rm -rf _build')
+    run('rm -rf var')
 
 
-@task
-def run():
-    from builder import app
-    app.run(debug=True)
+@task(name='run')
+def run_():
+    run('python builder.py')
