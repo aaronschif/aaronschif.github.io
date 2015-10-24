@@ -19,6 +19,7 @@
     padding: 8px 16px
     background: white
   body
+    font-family: 'OfficeCodeProDRegular'
     // background-image: url("http://th04.deviantart.net/fs70/PRE/i/2011/324/f/1/graph_paper_and_doodles__d_by_snerfled-d4gst62.jpg")
     background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fplanetzac.com%2Fmedia%2F2011%2F09%2Foriginal%2Feng_paper.png&f=1")
     // background-image: url("http://www.civilpe.net/wp-content/uploads/2012/06/Engineering-Paper-Website-Background3.png")
@@ -38,7 +39,7 @@
   img
     float: right
     border:
-      radius: 8px
+      radius: 0px
       color: gray
       width: 2px
       style: solid
@@ -46,10 +47,15 @@
 .navbar-inverse
   border-radius: 0px
 
-.resume
+.content
   a
-    color: #333
+    color: inherit
     text-decoration: underline
+
+  a:hover
+    color: #333
+    background: lighten(grey, 40)
+    text-decoration: overline
 
 .resume-content
   h2
