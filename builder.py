@@ -28,6 +28,7 @@ class Router(object):
     @cherrypy.expose
     def index(self):
         template = env.get_template('home.jade')
+        template = env.get_template('resume.jade')
         return template.render()
 
     @cherrypy.expose
