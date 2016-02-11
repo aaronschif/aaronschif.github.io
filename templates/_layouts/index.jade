@@ -9,7 +9,7 @@ html(lang="en")
     link(rel="shortcut icon" href="http://icons.iconarchive.com/icons/icons8/android/512/Animals-Sheep-icon.png")
     link(rel="stylesheet" href="https://fontlibrary.org/face/office-code-pro")
     
-    - assets filters="libsass", output="gen/packed.css", "main.sass"
+    - assets 'css'
         link(href=ASSET_URL, rel="stylesheet")
     - endassets
   body
@@ -24,7 +24,7 @@ html(lang="en")
           a(href='/').navbar-brand Aaron Schif
         .collapse.navbar-collapse#navbar
           ul.nav.navbar-nav
-            li: a(href="/") Resume
+            li: a(href="/resume.html") Resume
             li: a(href='https://github.com/aaronschif') 
               i(class="fa fa-github")&nbsp On Github
             li: a(href='http://stackoverflow.com/users/1813277/aaron-schif') 

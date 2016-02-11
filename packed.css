@@ -23,7 +23,16 @@
 
 @media print {
   .content {
-    width: 100%; } }
+    width: 100%;
+    padding: 2px;
+  }
+  h2 {
+      margin: 2px;
+  }
+  dl {
+      display: block;
+  }
+}
 
 @media print {
   a[href]:after {
