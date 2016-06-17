@@ -1,0 +1,116 @@
+$width: 800px
+
+dl.dl-horizontal-flex
+    margin-bottom: 0px
+    display: flex
+
+    flex-wrap: wrap
+
+    dt
+        margin-bottom: 8px
+        flex: 1 1 100%
+        @media (min-width: $width)
+            flex: 1 1 30%
+            padding-right: 8px
+            text-align: right
+    dd
+        margin-bottom: 8px
+        p
+            margin-bottom: 4px
+        flex: 1 1 auto
+        @media (min-width: $width)
+            flex: 1 1 70%
+
+a
+    color: inherit
+    text-decoration: underline
+a[href]:after
+    content: none !important
+
+a:hover
+    color: inherit
+    background: lighten(gray, 40)
+    text-decoration: overline
+
+body
+    font-family: 'OfficeCodeProDRegular'
+    @media screen
+        background-color: lighten(gray, 40%) !important
+    color: black
+
+.date-text
+    color: gray
+
+.container-content
+    .header
+        h1
+            background-color: white
+            border: none
+    h1
+        // background-color: lighten(gray, 40%)
+        // border: solid gray 1px
+        border-bottom: solid black 2px
+        margin-top: 0px
+        padding: 4px
+        font-size: 2em
+
+    h2
+        font-size: 1.5em
+        margin-top: 0px
+        padding: 0px
+
+
+.container-nav, .container-footer
+    display: flex
+    @media print
+        display: none
+    background-color: white
+    box-shadow: 4px 4px 5px #888888
+    flex: 1 1 $width
+    flex-wrap: wrap
+    margin: 16px auto
+    max-width: $width
+    flex-direction: column
+    @media (min-width: $width)
+        flex-direction: row
+
+    a
+        align-self: center
+        &.site
+            font-size: 1.3em
+        text-decoration: none
+        color: black
+        margin: 4px 8px
+        padding: 4px
+        flex: 0 1 auto
+
+.container-content
+    background-color: white
+    padding: 16px
+    box-shadow: 4px 4px 5px #888888
+    display: flex
+    max-width: $width
+    margin: auto
+    flex-direction: column
+
+    & > *
+        flex: 1 1 auto
+
+    .header
+        display: flex
+        width: 100%
+
+        flex-direction: column
+        @media (min-width: $width)
+            flex-direction: row
+
+        & > *
+            flex: 1 1 auto
+
+    .contact
+        @media (min-width: $width)
+            text-align: right
+
+    .title
+
+    .content

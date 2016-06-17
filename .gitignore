@@ -1,2 +1,6 @@
 *.pyc
 /var
+.lock-*
+.waf*
+/build
+/node_modules

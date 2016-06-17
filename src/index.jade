@@ -1,0 +1,117 @@
+!!! 5
+mixin fa(icon)
+    <i class="fa fa-#{icon}"></i>&nbsp;
+
+html(lang="en")
+    head
+        title Aaron Schif - Resume
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel="stylesheet")
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
+        link(href="./main.css", rel="stylesheet")
+    body
+        nav.container-nav
+            a(href='#').site Aaron Schif
+            a(href='#') Resume
+            a(href='https://github.com/aaronschif') #[+fa("github")] On Github
+            a(href='http://stackoverflow.com/users/1813277/aaron-schif') #[+fa("stack-overflow")] On Stack Overflow
+      
+        main.container-content
+            .header
+                .title
+                    h1 Aaron Schif
+                    h2 Software Developer
+                .contact
+                    p: a(href='tel:3169938027') 316.993.8027
+                    p: a(href='mailto:aaronschif@gmail.com') aaronschif@gmail.com
+                    p: a(href='https://aaronschif.github.io') aaronschif.github.io
+            h1 Profile
+            dl.dl-horizontal-flex
+                dt: <i class="fa fa-github"></i> github
+                dd: a(href="https://github.com/aaronschif") github.com/aaronschif
+                dt: <i class="fa fa-stack-overflow"></i> stackoverflow
+                dd: a(href="http://stackoverflow.com/users/1813277/aaron-schif") stackoverflow.com/users/1813277/aaron-schif
+
+            h1 Education
+            dl.dl-horizontal-flex
+                dt Kansas State University<br>
+                    small.date-text December 2016 Grad
+                dd
+                    p.
+                        Study computer science. Work in a team. Learn many programming
+                        languages, pattens, and techniques. Favorite courses include 
+                        Game Engine Design, Concurrent Software Systems, and Computer Architecture.
+                    P 3.1 Overall GPA  
+            
+            h1 Experience
+            dl.dl-horizontal-flex
+                dt KSU Webteam<br>
+                    small.date-text Sept. 2013 - May 2016
+                dd
+                    p.
+                        Developed internet applications for KSU. Worked on an agile team. 
+                        I was responsible for training new employees in Django and python.     
+                dt Network Development Group<br>
+                    small.date-text May 2016 - Present
+                dd
+                    p.
+                        Internship
+                dt dgitprompt
+                dd
+                  p.
+                     Built with D, C, and libgit. Displays git information in a shell 
+                     independent manner for your prompt. Licenced under MIT licence.
+                  p: a(href="https://github.com/aaronschif/dgitprompt") github.com/aaronschif/dgitprompt
+                dt Eagle Scout
+                dd
+                  p.
+                    Praticipated in community projects. Learned leadership and teamwork.
+                dt 4th place 2015 <br> ACM programming contest
+                dd 
+                  p.
+                    Worked with my team to prove out programming abilities. Competed to 
+                    complete the most programming brain teasers with the fewest mistakes 
+                    in the allotted time.
+            
+            h1 Skills
+            dl.dl-horizontal-flex
+                dt Languages
+                dd: ul.list-inline
+                  li Python
+                  li D
+                  li C
+                  li C++
+                  li C#
+                  li java
+                  li bash
+                  li HTML
+                  li css
+                  li sass
+                  li JavaScript
+                  li Node.js
+                  li Markdown
+                dt Frameworks
+                dd: ul.list-inline
+                  li Django
+                  li Linux
+                  li Unix
+                  li JQuery
+                  li Ajax
+                  li Twitter Bootstrap
+                  li Responsive Design
+                  li GTK
+                  li MySQL
+                dt Techniques
+                dd: ul.list-inline
+                  li Unit Testing
+                  li Test Driven Development
+                  li Multiprogramming
+                  li Continous Integration
+                  li Version Control 
+                dt Programs
+                dd: ul.list-inline
+                  li git
+                  li Vagrant
+                  li Jenkins
+                  li py.test
+          footer.container-footer
+              a(href="./resume.pdf") PDF Resume
