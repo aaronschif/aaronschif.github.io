@@ -9,19 +9,24 @@ $width: 800px
     li
         margin-bottom: .2em
 
+    ul
+        margin: 0
+
     h3
         font-weight: 600
         flex: 1 1 100%
+        margin-bottom: .2em
         @media (min-width: $width)
             flex: 1 1 30%
+            margin-bottom: 1em
             padding-right: .8em
             text-align: right
     & > *
         line-height: 1.1
         margin: 0
         padding: 0
-        margin-bottom: .8em
         font-size: 1em
+        margin-bottom: 1em
         flex: 1 1 auto
         @media (min-width: $width)
             flex: 1 1 70%
@@ -58,7 +63,8 @@ body
     h1
         // background-color: lighten(gray, 40%)
         // border: solid gray 1px
-        border-bottom: solid black .025em
+        // border-bottom: solid black .025em
+        border-bottom: solid black 1px
         margin-top: 0
         padding: .05em
         font-size: 2em
