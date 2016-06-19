@@ -1,8 +1,0 @@
-CherryPy==5.0.1
-Jinja2==2.8
-libsass==0.9.3
-MarkupSafe==0.23
-pyjade==4.0.0
-six==1.10.0
-webassets==0.11.1
-wheel==0.29.0
