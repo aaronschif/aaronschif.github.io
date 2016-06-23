@@ -14,11 +14,11 @@ html(lang="en")
         link(rel="icon", href="./sheep.min.svg", sizes="any", type="image/svg+xml")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
     body
-        nav.container-nav
-            a(href='#') Aaron Schif
-            a(href='#') Resume
-            a(href='https://github.com/aaronschif') #[+fa("github")] On Github
-            a(href='http://stackoverflow.com/users/1813277/aaron-schif') #[+fa("stack-overflow")] On Stack Overflow
+        nav.container-nav: ul.nav-list
+            li: a(href='#') Aaron Schif
+            li: a(href='#') Resume
+            li: a(href='https://github.com/aaronschif') #[+fa("github")] On Github
+            li: a(href='http://stackoverflow.com/users/1813277/aaron-schif') #[+fa("stack-overflow")] On Stack Overflow
       
         main.container-content
             .header
@@ -73,7 +73,7 @@ html(lang="en")
                 h3 4th place 2015 <br> ACM programming contest
                 div 
                   p.
-                    Worked with my team to prove out programming abilities. Competed to 
+                    Worked with my team to prove our programming abilities. Competed to 
                     complete the most programming brain teasers with the fewest mistakes 
                     in the allotted time.
             
@@ -118,6 +118,6 @@ html(lang="en")
                   li Vagrant
                   li Jenkins
                   li py.test
-          footer.container-footer
-              a(href="./resume.pdf") PDF Resume
-              a(href="./aaron_schif.vcs") VCard
+          footer.container-footer: ul.nav-list
+              li: a(href="./aaron_schif_resume.pdf") PDF Resume
+              li: a(href="./aaron_schif.vcs") VCard

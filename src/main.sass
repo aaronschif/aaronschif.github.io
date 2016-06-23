@@ -45,7 +45,7 @@ a[href]:after
 a:hover
     color: inherit
     background: lighten(gray, 40)
-    text-decoration: overline
+    text-decoration: none
 
 body
     font-family: 'OfficeCodeProDRegular'
@@ -75,39 +75,46 @@ body
         margin-top: 0
         padding: 0
 
+=card
+  box-shadow: .0em .0em .2em gray, .0em .2em .1em gray
+  background-color: white
+  max-width: $max-width
 
 .container-nav, .container-footer
+    +card
     display: flex
     @media print
         display: none
-    background-color: white
-    box-shadow: .1em .1em .1em #888888
     flex: 1 1 $width
     flex-wrap: wrap
     margin: 1em auto
-    max-width: $max-width
 
-    flex-direction: column
-    @media (min-width: $width)
-        flex-direction: row
+    .nav-list
+        display: flex
+        list-style-type: none
+        padding: 0
+        margin: 0
+        line-height: 1.1
+        flex-direction: column
+        @media (min-width: $width)
+            flex-direction: row
+        li
+            flex: 0 1 auto
+            display: flex
+            align-self: left
+            @media (min-width: $width)
+                align-self: center
 
     a
-        align-self: left
-        @media (min-width: $width)
-            align-self: center
-
         text-decoration: none
         color: black
-        margin: .5em 1em
+        margin: .5em
         padding: .25em
-        flex: 0 1 auto
 
 .container-content
-    background-color: white
+    +card
     padding: 1em
-    box-shadow: .1em .1em .1em #888888
     display: flex
-    max-width: $max-width
     margin: auto
     flex-direction: column
 
