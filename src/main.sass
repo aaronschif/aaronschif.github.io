@@ -8,7 +8,10 @@ $max-width: 80rem
     flex-wrap: wrap
 
     li
+        padding: 0
         margin-bottom: .2em
+        &:not(:last-child)::after
+            content: ", "
 
     ul
         margin: 0
@@ -126,6 +129,8 @@ body
         width: 100%
         p
             margin-bottom: .4em
+        a
+            text-decoration: none
 
         flex-direction: column
         @media (min-width: $width)

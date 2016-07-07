@@ -50,6 +50,8 @@ class _ImageMagick(Task.Task):
             cmd = 'convert -background none {src} -resize {size} {tgt}'
         else:
             cmd = 'convert -background none {src} {tgt}'
+        if self.target.endswith('svg') and self.source.endswith('svg'):
+            cmd = 'cp {src} {tgt}'
         return cmd.format(src=self.source, tgt=self.target, size=self.opt_size)
 
     def run(self):

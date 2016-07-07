@@ -1,11 +1,11 @@
 !!! 5
 mixin fa(icon)
-    i(class="fa fa-#{icon}")
+    i(class="fa fa-#{icon}", aria-hidden="true")
 
 html(lang="en")
     head
         title Aaron Schif - Resume
-        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel="stylesheet")
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", rel="stylesheet")
         link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
         link(href="./main.css", rel="stylesheet")
         link(href="https://fontlibrary.org/face/office-code-pro", rel="stylesheet")
@@ -13,6 +13,7 @@ html(lang="en")
         link(rel="icon", href="./sheep.png")
         link(rel="icon", href="./sheep.min.svg", sizes="any", type="image/svg+xml")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(charset="utf-8") 
     body
         nav.container-nav: ul.nav-list
             li: a(href='#') Aaron Schif
@@ -96,28 +97,28 @@ html(lang="en")
                     li Markdown
                 h3 Frameworks
                 div: ul.list-inline
-                  li Django
-                  li Linux
-                  li Unix
-                  li JQuery
-                  li Ajax
-                  li Twitter Bootstrap
-                  li Responsive Design
-                  li GTK
-                  li MySQL
+                    li Django
+                    li Linux
+                    li Unix
+                    li JQuery
+                    li Ajax
+                    li Twitter Bootstrap
+                    li Responsive Design
+                    li GTK
+                    li MySQL
                 h3 Techniques
                 div: ul.list-inline
-                  li Unit Testing
-                  li Test Driven Development
-                  li Multiprogramming
-                  li Continous Integration
-                  li Version Control 
+                    li Unit Testing
+                    li Test Driven Development
+                    li Multiprogramming
+                    li Continous Integration
+                    li Version Control 
                 h3 Programs
                 div: ul.list-inline
-                  li git
-                  li Vagrant
-                  li Jenkins
-                  li py.test
+                    li git
+                    li Vagrant
+                    li Jenkins
+                    li py.test
           footer.container-footer: ul.nav-list
               li: a(href="./aaron_schif_resume.pdf") PDF Resume
               li: a(href="./aaron_schif.vcs") VCard
