@@ -1,0 +1,25 @@
+doctype html
+
+mixin fa(icon)
+    i(class=`fa fa-${icon}`, aria-hidden="true")
+
+html(lang="en")
+    head
+        title Aaron Schif - Resume
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", rel="stylesheet")
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
+        link(href="https://fontlibrary.org/face/office-code-pro", rel="stylesheet")
+        link(href="./main.css", rel="stylesheet")
+        link(rel="icon", href="./sheep.ico")
+        link(rel="icon", href="./sheep.png")
+        link(rel="icon", href="./sheep.min.svg", sizes="any", type="image/svg+xml")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(charset="utf-8")
+        base(href=".")
+    body
+        nav.container-nav: ul.nav-list
+            li: a(href='index.html') Aaron Schif
+            li: a(href='resume.html') Resume
+            li: a(href='https://github.com/aaronschif') #[+fa("github")] On Github
+            li: a(href='http://stackoverflow.com/users/1813277/aaron-schif') #[+fa("stack-overflow")] On Stack Overflow
+        block content
