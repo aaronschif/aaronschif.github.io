@@ -18,11 +18,11 @@ gulp.task('image', function () {
         .pipe(gulp.dest('public/'));
 })
 
-gulp.task('jade', function () {
-  return gulp.src('src/*.jade')
+gulp.task('pug', function () {
+  return gulp.src('src/*.pug')
   .pipe(pug({
     pretty: true,
   })).pipe(gulp.dest('public/'));
 });
 
-gulp.task('default', ['sass', 'jade', 'image']);
+gulp.task('default', ['sass', 'pug', 'image']);
