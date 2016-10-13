@@ -22,7 +22,21 @@ gulp.task('pug', function () {
   return gulp.src('src/*.pug')
   .pipe(pug({
     pretty: true,
+    locals: {
+        require: require
+    },
   })).pipe(gulp.dest('public/'));
 });
 
 gulp.task('default', ['sass', 'pug', 'image']);
+
+// gulp.task('posts', ()=>{
+//     return gulp.src('posts/*')
+//         .pipe(()=>{
+//
+//         })
+// })
+
+gulp.task('watch', ['default'], ()=>{
+    gulp.watch('src/**', ['default'])
+})

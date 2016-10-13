@@ -1,3 +1,35 @@
 extends _templates/base.pug
 
+append head
+    - var lorem = require('lorem-ipsum')
+
 block content
+    main.container-content
+        article
+            h1 About me
+            h2 Looking to hire me? I don't blame you.
+
+
+            img(src="https://www.gravatar.com/avatar/882d0052c50ecb22a41df0c10810fa3f?s=200" width=200 height=200)
+            p= lorem({count: 20})
+
+        h1 Blog
+        .blog-posts
+            .post
+                h1 Building something with asyncio
+                p= lorem({count: 8})
+
+            .post
+                h1 Learning
+                p adsfasdf
+                p asdfqfwefqvvsdsavsdv
+                pre: code.
+                    def asdf:
+                        print("asdf")
+
+            .post
+                h1 Learning
+                //- img(src="http://thumbs.dreamstime.com/z/source-code-html-vector-6491941.jpg")
+                p adsfasdf
+                p asdfgwfwqfdsfc
+            a(href="/blog.html").nav-link= "The rest ->"
