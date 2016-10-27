@@ -6,33 +6,43 @@ var markdown    = require('metalsmith-markdown');
 var permalinks  = require('metalsmith-permalinks');
 var pug = require('metalsmith-pug');
 var sass = require('metalsmith-sass');
+var more = require('metalsmith-more');
 
 
-Metalsmith(__dirname)         // __dirname defined by node.js:
-                              // name of current working directory
-  .metadata({                 // add any variable you want
-                              // use them in layout-files
+Metalsmith(__dirname)
+  .metadata({
     sitename: "My Static Site & Blog",
     siteurl: "http://example.com/",
     description: "It's about saying »Hello« to the world.",
     generatorname: "Metalsmith",
     generatorurl: "http://metalsmith.io/"
   })
-  .source('./src')            // source directory
-  .destination('./build')     // destination directory
-  .clean(true)                // clean destination before
-  .use(collections({          // group all blog posts by internally
-    posts: 'posts/*/*.md'       // adding key 'collections':'posts'
-  }))                         // use `collections.posts` in layouts
-  .use(markdown())            // transpile all md into html
-  .use(layouts({              // wrap layouts around html
-    engine: 'handlebars',     // use the layout engine you like
+  .source('./src')
+  .destination('./build')
+  .clean(true)
+  .use(collections({
+    posts: {
+        pattern: 'blog/*/*.md',
+        sortBy: 'date',
+        reverse: true,
+    }
   }))
-  .use(pug({locals: {require: require}}))
+  .use(markdown())
+  .use(more())
+  .use(layouts({
+    engine: 'pug',
+    default: 'post.pug',
+    directory: 'src/_templates',
+    pattern: 'blog/*/*.html',
+  }))
+  .use(permalinks({
+      relative: false
+  }))
+  .use(pug({locals: {require: require}, useMetadata:true}))
+  .use(permalinks({
+      relative: false
+  }))
   .use(sass())
-  .use(permalinks({           // change URLs to permalink URLs
-      relative: false           // put css only in /css
-  }))
   .build(function(err) {      // build process
     if (err) throw err;       // error handling is required
   });

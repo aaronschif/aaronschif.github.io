@@ -32,4 +32,8 @@ block content
                 //- img(src="http://thumbs.dreamstime.com/z/source-code-html-vector-6491941.jpg")
                 p adsfasdf
                 p asdfgwfwqfdsfc
-            a(href="/blog.html").nav-link= "The rest ->"
+            .post
+                each post in posts
+                    a(href=post.path): h1 #{post.title} - #{post.date}
+                    p!= post.less
+            a(href="/blog").nav-link= "The rest ->"
