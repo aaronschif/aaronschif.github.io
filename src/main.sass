@@ -5,6 +5,9 @@ $color-one: #FF9900
 $color-two: #336688
 $color-three: #FFCC00
 
+@import url("http://overpass-30e2.kxcdn.com/overpass.css")
+@import url("//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css")
+
 // $color-one: #00CC00
 // $color-two: #FF9900
 // $color-three: #000099
@@ -59,7 +62,7 @@ a:hover
     text-decoration: none
 
 body
-    font-family: 'OfficeCodeProDRegular'
+    font-family: 'overpass'
     @media screen
         background-color: lighten(gray, 40%) !important
     color: black
@@ -73,10 +76,7 @@ body
             background-color: white
             border: none
     h1
-        // background-color: lighten(gray, 40%)
-        // border: solid gray 1px
-        // border-bottom: solid black .025em
-        border-bottom: solid black 1px
+        border-bottom: solid $color-two .2rem
         margin-top: 0
         padding: .05em
         font-size: 2em
@@ -160,7 +160,7 @@ body
     padding: .4rem
     // border-radius: .4rem
     border-left: solid $color-one .2rem
-    border-bottom: solid $color-two .1rem
+    border-bottom: solid $color-two .2rem
     margin-bottom: 2rem
     // background-color: $color-two
     // color: white
@@ -171,6 +171,9 @@ body
 
 pre
     border-radius: 0
+
+code
+    font-family: 'hack'
 
 img
     border: solid $color-two .2rem

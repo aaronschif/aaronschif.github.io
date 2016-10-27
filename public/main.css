@@ -61,7 +61,7 @@ body {
   border: none; }
 
 .container-content h1 {
-  border-bottom: solid black 1px;
+  border-bottom: solid #336688 0.2rem;
   margin-top: 0;
   padding: .05em;
   font-size: 2em; }
@@ -136,7 +136,7 @@ body {
 .blog-posts .post {
   padding: .4rem;
   border-left: solid #FF9900 0.2rem;
-  border-bottom: solid #336688 0.1rem;
+  border-bottom: solid #336688 0.2rem;
   margin-bottom: 2rem; }
   .blog-posts .post h1 {
     font-size: 12pt;

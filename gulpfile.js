@@ -3,6 +3,8 @@ var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var svg2png = require('gulp-svg2png');
+var through = require('through2')
+
 
 gulp.task('sass', function () {
   return gulp.src('./src/*.sass')
@@ -20,22 +22,29 @@ gulp.task('image', function () {
 
 gulp.task('pug', function () {
   return gulp.src('src/*.pug')
-  .pipe(pug({
-    pretty: true,
-    locals: {
-        require: require
-    },
-  })).pipe(gulp.dest('public/'));
+      .pipe(pug({
+        pretty: true,
+        locals: {
+            require: require
+        },
+      }))
+      .pipe(gulp.dest('public/'));
 });
 
 gulp.task('default', ['sass', 'pug', 'image']);
 
-// gulp.task('posts', ()=>{
-//     return gulp.src('posts/*')
-//         .pipe(()=>{
-//
-//         })
-// })
+gulp.task('posts', ()=>{
+    let thing = through.obj(function(chunk, enc, callback){
+        console.log(chunk, enc, callback)
+        console.log(chunk.path)
+        this.push(chunk)
+        callback()
+    })
+
+    return gulp.src('src/posts/*')
+        .pipe(thing)
+        .pipe(gulp.dest('public/posts/'));
+})
 
 gulp.task('watch', ['default'], ()=>{
     gulp.watch('src/**', ['default'])
