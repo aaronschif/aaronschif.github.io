@@ -2,6 +2,7 @@ extends _templates/base.pug
 
 append head
     - var lorem = require('lorem-ipsum')
+    - var dateformat = require('dateformat')
 
 block content
     main.container-content
@@ -9,31 +10,16 @@ block content
             h1 About me
             h2 Looking to hire me? I don't blame you.
 
-
             img(src="https://www.gravatar.com/avatar/882d0052c50ecb22a41df0c10810fa3f?s=200" width=200 height=200)
-            p= lorem({count: 20})
+            p.
+                Unfortunately, I suffer from brevity. I will complete this
+                soon (hopefully).
 
         h1 Blog
         .blog-posts
-            .post
-                h1 Building something with asyncio
-                p= lorem({count: 8})
-
-            .post
-                h1 Learning
-                p adsfasdf
-                p asdfqfwefqvvsdsavsdv
-                pre: code.
-                    def asdf:
-                        print("asdf")
-
-            .post
-                h1 Learning
-                //- img(src="http://thumbs.dreamstime.com/z/source-code-html-vector-6491941.jpg")
-                p adsfasdf
-                p asdfgwfwqfdsfc
-            .post
-                each post in posts
-                    a(href=post.path): h1 #{post.title} - #{post.date}
+            each post in posts
+                .post
+                    a(href=post.path): h1 #{post.title}
+                    time= dateformat(post.date, 'dd-mm-yyyy')
                     p!= post.less
             a(href="/blog").nav-link= "The rest ->"

@@ -7,6 +7,7 @@ var permalinks  = require('metalsmith-permalinks');
 var pug = require('metalsmith-pug');
 var sass = require('metalsmith-sass');
 var more = require('metalsmith-more');
+var spellcheck = require('metalsmith-spellcheck');
 
 
 Metalsmith(__dirname)
@@ -27,7 +28,7 @@ Metalsmith(__dirname)
         reverse: true,
     }
   }))
-  .use(markdown())
+  .use(markdown({highlight: (code, lang)=>require('highlight.js').highlight(lang, code).value}))
   .use(more())
   .use(layouts({
     engine: 'pug',
@@ -39,6 +40,7 @@ Metalsmith(__dirname)
       relative: false
   }))
   .use(pug({locals: {require: require}, useMetadata:true}))
+  // .use(spellcheck())
   .use(permalinks({
       relative: false
   }))

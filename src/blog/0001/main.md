@@ -5,4 +5,11 @@ date: 2013-02-21
 
 foo bar
 
+```python
+import asyncio
+
+async def control(ws):
+    pass
+```
+
 <!-- more -->
