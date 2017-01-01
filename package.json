@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "serve": "cd build && python3 -m http.server"
+  },
   "devDependencies": {
     "gulp-markdown-to-json": "^1.0.1",
     "markdown-it": "^8.0.0",
