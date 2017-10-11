@@ -12,7 +12,7 @@ block content
         .blog-posts
             each post in posts.concat().splice(0, 5)
                 .post
-                    a(href=post.path): h1 #{post.title}
+                    a(href='/'+post.path): h1 #{post.title}
                     time= dateformat(post.date, 'dd-mm-yyyy')
                     p!= post.less
             a(href="/blog").nav-link= "The rest ->"

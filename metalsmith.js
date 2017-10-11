@@ -8,6 +8,7 @@ var pug = require('metalsmith-pug');
 var sass = require('metalsmith-sass');
 var more = require('metalsmith-more');
 var spellcheck = require('metalsmith-spellcheck');
+var postcss = require('metalsmith-postcss');
 
 
 Metalsmith(__dirname)
@@ -45,6 +46,9 @@ Metalsmith(__dirname)
       relative: false
   }))
   .use(sass())
+  .use(postcss({
+      plugins: {'autoprefixer': {}},
+  }))
   .build(function(err) {      // build process
     if (err) throw err;       // error handling is required
   });
