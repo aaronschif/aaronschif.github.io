@@ -42,7 +42,7 @@ a[href]:after {
   content: none !important; }
 
 a:hover {
-  color: #336688 !important;
+  color: inherit;
   background: #e6e6e6;
   text-decoration: none; }
 
@@ -61,7 +61,7 @@ body {
   border: none; }
 
 .container-content h1 {
-  border-bottom: solid #336688 0.2rem;
+  border-bottom: solid black 1px;
   margin-top: 0;
   padding: .05em;
   font-size: 2em; }
@@ -75,7 +75,6 @@ body {
   box-shadow: .0em .0em .2em gray, .0em .2em .1em gray;
   background-color: white;
   max-width: 80rem;
-  background-color: #336688;
   display: flex;
   flex: 1 1 800px;
   flex-wrap: wrap;
@@ -102,7 +101,7 @@ body {
           align-self: center; } }
   .container-nav a, .container-footer a {
     text-decoration: none;
-    color: white;
+    color: black;
     margin: .5em;
     padding: .25em; }
 
@@ -132,26 +131,3 @@ body {
   @media (min-width: 800px) {
     .container-content .contact {
       text-align: right; } }
-
-.blog-posts .post {
-  padding: .4rem;
-  border-left: solid #FF9900 0.2rem;
-  border-bottom: solid #336688 0.2rem;
-  margin-bottom: 2rem; }
-  .blog-posts .post h1 {
-    font-size: 12pt;
-    font-weight: bold;
-    border-bottom: none; }
-
-pre {
-  border-radius: 0; }
-
-img {
-  border: solid #336688 0.2rem;
-  float: right;
-  margin: 1.2rem; }
-
-.nav-link {
-  text-decoration: none;
-  color: #336688;
-  font-weight: bold; }
