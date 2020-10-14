@@ -31,7 +31,7 @@ gulp.task('pug', function () {
       .pipe(gulp.dest('public/'));
 });
 
-gulp.task('default', ['sass', 'pug', 'image']);
+// gulp.task('default', ['sass', 'pug', 'image']);
 
 gulp.task('posts', ()=>{
     let thing = through.obj(function(chunk, enc, callback){
@@ -46,6 +46,6 @@ gulp.task('posts', ()=>{
         .pipe(gulp.dest('public/posts/'));
 })
 
-gulp.task('watch', ['default'], ()=>{
-    gulp.watch('src/**', ['default'])
-})
+// gulp.task('watch', ['default'], ()=>{
+//     gulp.watch('src/**', ['default'])
+// })

@@ -1,0 +1,18 @@
+<template id="main">
+  <link rel="stylesheet" href="/common.css" />
+  <link rel="stylesheet" href="/components/main/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <div class="content">
+    <header>
+      <a><img src="/sheep.svg"></img> Aaron Schif</a>
+    </header>
+    <main>
+      <slot name="content-main"></slot>
+    </main>
+    <footer>
+      <a href="/aaron_schif_resume.pdf"><i class="fas fa-file-alt" aria-hidden="true"></i> PDF Resume</a>
+      <a href="/aaron_schif.vcs"><i class="fas fa-id-card" aria-hidden="true"></i> VCard</a>
+      <a href="/aaronschif.gpg"><i class="fas fa-key" aria-hidden="true"></i> GPG Key</a>
+    </footer>
+  </div>
+</template>
